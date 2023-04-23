@@ -1,6 +1,6 @@
 function viewMain() {
     html = /*html*/`
-    <h1>Dice</h1>
+    <h1>Dice statistics</h1>
     <button onclick="roll(1)">Roll once!</button>
     <button onclick="repeatRoll()">Roll several!</button>
     <button onclick="goToStats()">Stats page</button>
