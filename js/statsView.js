@@ -11,8 +11,13 @@ function viewStats() {
 
 function showPossibleRolls() {
     let html = "";
-    for(let x of model.data.possibleRolls) {
-        html += `${x}: ${countElems(model.data.rolls, x)}<br />`;
+    const rollsCount = model.data.rolls.length;
+
+    for (let x of model.data.possibleRolls) {
+        const rollCount = countElems(model.data.rolls, x);
+        const percentage = (rollCount / rollsCount) * 100;
+        html += `${x}: ${rollCount} (${percentage.toFixed(2)}%)<br />`;
     }
+
     return html;
 }
